@@ -136,6 +136,7 @@ int main ()
 		printf("\t 1 - Registro de nomes\n"); // \t para dar um espaço antes de começar a frase 
 		printf("\t 2 - Consulta de nomes\n");
 		printf("\t 3 - Exclusão de nomes\n");
+		printf("\t 4 - Sair do sistema\n");
 		printf("Opção: ");
 		
 		scanf("%d", &opcao); // "%d" esta dizendo para armazenar uma variável
@@ -156,6 +157,10 @@ int main ()
 				deletar();
 				break;
 				
+			case 4:
+				printf("Ogrigado por utilizar o sistema!\n");
+				return 0;	
+				break;
 				
 			default:
 				printf("Essa opção não está disponível!\n");
