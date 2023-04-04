@@ -124,53 +124,63 @@ int main ()
 {
 	int opcao=0; //Definindo variáveis 
 	int x=1;
+	char senhadigitada[]="a";
+	int comparacao;
 	
-	for(x=1;x=1;)
+	printf("### Cartório da EBAC ###\n\n");
+	printf("Login de administrador!\n\nGigite a sua senha: ");
+	scanf("%s",senhadigitada);
+	
+	comparacao = strcmp(senhadigitada, "admin"); //strcmp é a comparação entre strings 
+	
+	if(comparacao == 0)
 	{
-		system("cls");
-		
-		setlocale(LC_ALL, "Portuguese"); //comando que informa que a linguagem dos textos é em portugues 
-		
-		printf("### Cartório da EBAC ###\n\n"); // \n para pular uma linha
-		printf("Escolha a opção desejada no menu:\n\n");
-		printf("\t 1 - Registro de nomes\n"); // \t para dar um espaço antes de começar a frase 
-		printf("\t 2 - Consulta de nomes\n");
-		printf("\t 3 - Exclusão de nomes\n");
-		printf("\t 4 - Sair do sistema\n");
-		printf("Opção: ");
-		
-		scanf("%d", &opcao); // "%d" esta dizendo para armazenar uma variável
-		
-		system("cls"); // cls diz para limpar a tela
-		
-		switch(opcao)
+		for(x=1;x=1;)
 		{
-			case 1:
-				registro();
-				break;
-				
-			case 2:
-				consulta();
-				break;
-				
-			case 3:
-				deletar();
-				break;
-				
-			case 4:
-				printf("Ogrigado por utilizar o sistema!\n");
-				return 0;	
-				break;
-				
-			default:
-				printf("Essa opção não está disponível!\n");
-				system("pause");
-				break;
-		}
-		
-		 	
+			system ("cls");
+			
+			setlocale(LC_ALL, "Portuguese"); //comando que informa que a linguagem dos textos é em portugues 
+			
+			printf("### Cartório da EBAC ###\n\n"); // \n para pular uma linha
+			printf("Escolha a opção desejada no menu:\n\n");
+			printf("\t 1 - Registro de nomes\n"); // \t para dar um espaço antes de começar a frase 
+			printf("\t 2 - Consulta de nomes\n");
+			printf("\t 3 - Exclusão de nomes\n");
+			printf("\t 4 - Sair do sistema\n");
+			printf("Opção: ");
+			
+			scanf("%d", &opcao); // "%d" esta dizendo para armazenar uma variável
+			
+			system("cls"); // cls diz para limpar a tela
+			
+			switch(opcao)
+			{
+				case 1:
+					registro();
+					break;
+					
+				case 2:
+					consulta();
+					break;
+					
+				case 3:
+					deletar();
+					break;
+					
+				case 4:
+					printf("Ogrigado por utilizar o sistema!\n");
+					return 0;	
+					break;
+					
+				default:
+					printf("Essa opção não está disponível!\n");
+					system("pause");
+					break;
+			}
+		}		 	
 	}
-	
+	else
+		printf("Senha Incorreta!");
 	
 }
 
